@@ -28,9 +28,8 @@ def main():
 @app.route("/timeline", methods=["GET"])
 def timeline():
     tweets_from_timeline = api.home_timeline()
-    return render_template("main.html", tweets_from_timeline=tweets_from_timeline)
-    #for tweet in tweets_from_timeline:
-        #print tweep.text
+    return render_template("main.html", tweets_from_tl=tweets_from_timeline)
+
 
 @app.route("/tweet", methods=["POST"])
 def tweet():
@@ -38,7 +37,6 @@ def tweet():
     post_tweet = api.update_status(text)
     response = "Your tweet was sent: {}".format(text)
     return render_template("main.html", response=response)
-#text = raw_input("What would you like to Tweet?")
 
-print("Hello")
+
 app.run(host="0.0.0.0", port=port, debug=True)
