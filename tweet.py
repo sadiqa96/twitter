@@ -40,4 +40,5 @@ def tweet():
     return render_template("main.html", response=response)
 #text = raw_input("What would you like to Tweet?")
 
-app.run(port=port, debug=True)
+print("Hello")
+app.run(port=port, debug=False)
