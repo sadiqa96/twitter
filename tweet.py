@@ -41,4 +41,4 @@ def tweet():
 #text = raw_input("What would you like to Tweet?")
 
 print("Hello")
-app.run(host="0.0.0.0", port=port, debug=False)
+app.run(host="0.0.0.0", port=port, debug=True)
